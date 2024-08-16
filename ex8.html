@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">Cabecalho</div>
+    <div class="sidebar">Barra Lateral</div>
+    <div class="main">Conteúdo Principal</div>
+    <div class="footer"> Rodapé</div>
+    </div>
+</body>
+</html>
+<style>
+    .container{
+     display: grid;
+     grid-template-areas:
+            "header header header"
+            "sidebar main main"
+            "footer footer footer";
+grid-template-rows: 68px 1fr 48px;
+grid-template-columns: 200px 1fr 1fr;
+height: 180vh;
+}
+.header {
+grid-area: header;
+background-color: brown;
+color: black;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.Sidebar{
+grid-area: sidebar;
+background-color:lightskyblue;
+padding: 20px;
+}
+.main {
+grid-area: main;
+padding: 20px;
+background-color:gray;
+}
+.footer {
+grid-area: footer; 
+background-color:brown;
+color:black;
+display: flex;
+align-items: center;
+justify-content: center;
+ }
+</style>
